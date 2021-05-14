@@ -30,7 +30,7 @@
 	# How does a for loop iterate through a string?
 
 def one(input):
-	return ""
+	return
 
 	# <QUESTION 2>
 
@@ -48,11 +48,18 @@ def one(input):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(input):
-    return False
+    if input == 1:
+        return True
+    elif input == 2:
+        return True
+    elif input > 1:
+        for i in range(2,input):
+            if input%i == 0:
+                return False
+    return True
 
 	# <QUESTION 3>
-
-    # Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
+	# Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
 
 	# So if 2 was the input, the function should return 2+22+222+2222 which is 2468.
 
@@ -65,7 +72,11 @@ def two(input):
 	# What happens if you multiply a string by a number?
 
 def three(a):
-	return 1
+    a = str(a)
+    aa = str(a)+str(a)
+    aaa = str(a)+str(a)+str(a)
+    aaaa = str(a)+str(a)+str(a)+str(a)
+    return int(a) + int(aa) + int(aaa) + int(aaaa)
 
 	# <QUESTION 4>
 
@@ -110,8 +121,50 @@ def four(input1, input2):
 	# There is a module which can be used to generate random numbers, this module is called random.
 	# The random module contains a function called randint.
 
+import random
 def five():
-    return []
+    num1 = random.randint(100, 200)
+    if num1 == 200:
+        num1 = num1 - 1
+    elif num1 == 100:
+        num1 = num1 + 1
+    num2 = random.randint(100, 200)
+    if num2 == 200:
+        num2 = num2 - 1
+    elif num2 == 100:
+        num2 = num2 + 1
+    num3 = random.randint(100, 200)
+    if num3 == 200:
+        num3 = num3 - 1
+    elif num3 == 100:
+        num3 = num3 + 1
+    num4 = random.randint(100, 200)
+    if num4 == 200:
+        num4 = num4 - 1
+    elif num4 == 100:
+        num4 = num4 + 1
+    num5 = random.randint(100, 200)
+    if num5 == 200:
+        num5 = num5 - 1
+    elif num5 == 100:
+        num5 = num5 + 1
+    if num1 % 2 != 0:
+        num1 = num1 + 1
+        return True
+    if num2 % 2 != 0:
+        num2 = num2 + 1
+        return True
+    if num3 % 3 != 0:
+        num3 = num3 + 1
+        return True
+    if num4 % 4 != 0:
+        num4 = num4 + 1
+        return True
+    if num5 % 5 != 0:
+        num5 = num5 + 1
+        return True
+    list = [num1, num2, num3, num4, num5]
+    return list
 
 	# <QUESTION 6>
 
@@ -130,7 +183,8 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	return False
+    result = input.endswith("py") or input.endswith("pY")
+    return result
 
 	# <QUESTION 7>
 
@@ -153,8 +207,15 @@ def six(input):
 	# There is a function for lists called sort.
 	# Use the cli to access the documentation help(list.sort)
 
-def seven(a, b, c):
-	return False
+def seven(a,b,c):
+    ans1 = abs(a)-abs(b)
+    ans2 = abs(a)-abs(c)
+    ans3 = abs(b)-abs(c)
+
+    if ans1 == ans3 or ans2 == ans3:
+        return True
+    elif ans1 == ans2 or ans1 == ans2:
+        return True
 
 	# <QUESTION 8>
 
@@ -171,8 +232,10 @@ def seven(a, b, c):
 	# <HINT>
     # Use the cli to access the documentation help(str.replace)
 
-def eight(input,  a):
-	return ""
+def eight(input, a):
+	length = (len(input)-1)/2
+	return length,a
+
 
 	# <QUESTION 9>
 
