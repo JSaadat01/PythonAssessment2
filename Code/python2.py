@@ -123,48 +123,24 @@ def four(input1, input2):
 
 import random
 def five():
-    num1 = random.randint(100, 200)
-    if num1 == 200:
-        num1 = num1 - 1
-    elif num1 == 100:
-        num1 = num1 + 1
-    num2 = random.randint(100, 200)
-    if num2 == 200:
-        num2 = num2 - 1
-    elif num2 == 100:
-        num2 = num2 + 1
-    num3 = random.randint(100, 200)
-    if num3 == 200:
-        num3 = num3 - 1
-    elif num3 == 100:
-        num3 = num3 + 1
-    num4 = random.randint(100, 200)
-    if num4 == 200:
-        num4 = num4 - 1
-    elif num4 == 100:
-        num4 = num4 + 1
-    num5 = random.randint(100, 200)
-    if num5 == 200:
-        num5 = num5 - 1
-    elif num5 == 100:
-        num5 = num5 + 1
-    if num1 % 2 != 0:
-        num1 = num1 + 1
-        return True
-    if num2 % 2 != 0:
-        num2 = num2 + 1
-        return True
-    if num3 % 3 != 0:
-        num3 = num3 + 1
-        return True
-    if num4 % 4 != 0:
-        num4 = num4 + 1
-        return True
-    if num5 % 5 != 0:
-        num5 = num5 + 1
-        return True
-    list = [num1, num2, num3, num4, num5]
+    n1 = random.randint(100,200)
+    if n1%2 != 0:
+        n1=n1+1
+    n2 = random.randint(100,200)
+    if n2%2 != 0:
+        n2=n2+1
+    n3 = random.randint(100,200)
+    if n3%2 != 0:
+        n3=n3+1
+    n4 = random.randint(100,200)
+    if n4%2 != 0:
+        n4=n4+1
+    n5 = random.randint(100,200)
+    if n5%2 != 0:
+        n5=n5+1
+    list = [n1,n2,n3,n4,n5]
     return list
+
 
 	# <QUESTION 6>
 
